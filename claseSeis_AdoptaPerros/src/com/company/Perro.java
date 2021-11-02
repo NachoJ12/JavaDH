@@ -1,6 +1,5 @@
 package com.company;
-import java.util.Calendar;
-// import java.time.LocalDateTime;
+import java.time.LocalDateTime;
 
 public class Perro {
     private String nombre;
@@ -11,7 +10,6 @@ public class Perro {
     private Boolean tieneChip;
     private Boolean lastimado;
 
-    Calendar calendario = Calendar.getInstance();
 
     public Perro(String nombre, String raza, int añoNacimiento, Double peso, Boolean chip, Boolean lastimado) {
         this.nombre = nombre;
@@ -32,9 +30,7 @@ public class Perro {
     }
 
     public void edadPerro (){
-        int edad = calendario.get(Calendar.YEAR) - this.añoNacimiento;
-        System.out.println("La edad del perro " + getNombre() + " es: " + edad + " años");
-        // System.out.println( "La edad del perro" + getNombre() + "es: " + (LocalDateTime.now().getYear() - anioNacimiento) + " año");
+        System.out.println( "La edad del perro " + getNombre() + " es: " + (LocalDateTime.now().getYear() - añoNacimiento) + " año/s");
     }
 
     public void sePuedePerder(){
