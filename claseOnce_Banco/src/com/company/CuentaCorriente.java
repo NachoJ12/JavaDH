@@ -5,21 +5,23 @@ import java.util.Date;
 public class CuentaCorriente extends Cuenta{
     private double descubierto;
 
-    public CuentaCorriente(String numero, double descubierto) {
+    public CuentaCorriente(String numero) {
         super(numero);
-        this.descubierto = descubierto;
+        this.descubierto = 0.0;
     }
 
-    /*
+
+    public void depositarCheque(Cheque cheque) {
+        setSaldo(getSaldo() + cheque.getMonto());
+    }
+
     @Override
-    public void depositar(double importe) {
-       this.saldo += importe;
-    } */
+    public void extraerEfectivo(double importe) {
+        if (importe <= getSaldo()){
+            setSaldo(getSaldo()-importe);
+        } else {
+            setSaldo(0.0);
 
-    /* pensando como aplicar la funcionalidad del deposito del cheque
-    public void depositar (double importe, String banco, Date fecha){
-        this.saldo += importe;
-
-    }*/
-
+        }
+    }
 }

@@ -11,16 +11,20 @@ public abstract class Cuenta {
     }
 
     public void depositar(double importe){
-
+        this.saldo += importe;
     }
 
-    public void extraerEfectivo(double importe){
-
-    }
+    public abstract void extraerEfectivo(double importe);
 
     public void informarSaldo(){
         System.out.println("El saldo es de: " + saldo);
     }
 
+    public double getSaldo() {
+        return saldo;
+    }
 
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
 }

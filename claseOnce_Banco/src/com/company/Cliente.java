@@ -3,10 +3,10 @@ package com.company;
 public class Cliente {
     private int numero;
     private String apellido;
-    private int dni;
+    private String dni;
     private String cuit;
 
-    public Cliente (int numero, String apellido, int dni, String cuit){
+    public Cliente (int numero, String apellido, String dni, String cuit){
         this.numero = numero;
         this.apellido = apellido;
         this.dni = dni;
