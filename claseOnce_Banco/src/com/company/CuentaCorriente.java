@@ -20,8 +20,18 @@ public class CuentaCorriente extends Cuenta{
         if (importe <= getSaldo()){
             setSaldo(getSaldo()-importe);
         } else {
+            double importeExtra = getSaldo() - importe;
             setSaldo(0.0);
-
+            this.descubierto += importeExtra;
         }
+    }
+
+
+    public double getDescubierto() {
+        return descubierto;
+    }
+
+    public void setDescubierto(double descubierto) {
+        this.descubierto = descubierto;
     }
 }

@@ -1,5 +1,6 @@
 package com.company;
 
+// import java.time.LocalDate;
 import java.util.Date;
 
 public class Cheque {
@@ -11,6 +12,11 @@ public class Cheque {
         this.monto = monto;
         this.bancoEmisor = bancoEmisor;
         this.fechaDePago = fechaDePago;
+    }
+
+    public Cheque(double monto, String bancoEmisor) {
+        this.monto = monto;
+        this.bancoEmisor = bancoEmisor;
     }
 
     public double getMonto() {
