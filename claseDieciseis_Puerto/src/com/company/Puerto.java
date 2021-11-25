@@ -18,22 +18,23 @@ public class Puerto {
         contenedores.add(contenedor);
     }
 
-        /*
+
     public void mostrarContenedoresPorNumero(){
+        contenedores.sort(null);
+        for (Contenedor contenedor: contenedores){
+            System.out.println(contenedor.getNumero());
+        }
+    }
 
-
-    }*/
-
-    /*
-    public int getCantidadContenedoresPeligrosos(){
+    public int getCantidadContenedoresPeligrososProcedenciaDesconocida(){
         int cantidadContenedores = 0;
         for(Contenedor contenedor: contenedores){
-            if(contenedores.materialesPeligrosos == true && contenedores.getPaisProcedencia() == "Desconocido"){
+            if(contenedor.isMaterialesPeligrosos() == true && contenedor.getPaisProcedencia() == "Desconocida"){
                 cantidadContenedores++;
             }
         }
         return cantidadContenedores;
-    }*/
+    }
 
 
 }
