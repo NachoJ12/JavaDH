@@ -12,8 +12,24 @@ public class Cuenta implements Comparable<Cuenta> {
         this.saldo = saldo;
     }
 
+    public int getNroCuenta() {
+        return nroCuenta;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
     @Override
     public int compareTo(Cuenta o) {
         return this.nroCuenta - o.nroCuenta;
+    }
+
+    @Override
+    public String toString() {
+        return "Cuenta{" +
+                "nroCuenta=" + nroCuenta +
+                ", saldo=" + saldo +
+                '}';
     }
 }
