@@ -12,6 +12,9 @@ public class Tren {
         this.tren = new ArrayList<>();
     }
 
+    public void addTren(Armables armable){
+        this.tren.add(armable);
+    }
 
     public Double calcularAreaTren(){
         Double totalAreaTren = 0.0;

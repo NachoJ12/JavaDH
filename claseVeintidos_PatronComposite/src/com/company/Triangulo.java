@@ -12,6 +12,6 @@ public class Triangulo extends FiguraSimple{
 
     @Override
     public Double calcularArea() {
-        return (base * altura) / 2;
+        return base * altura / 2;
     }
 }
