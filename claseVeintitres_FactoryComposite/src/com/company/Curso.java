@@ -12,6 +12,9 @@ public class Curso extends OfertaAcademica{
         this.duracionMeses = duracionMeses;
     }
 
+    public int getCargaHorariaTotal(){
+        return this.cargaHorariaMensual * this.duracionMeses;
+    }
 
     @Override
     public String toString() {

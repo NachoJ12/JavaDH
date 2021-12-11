@@ -17,12 +17,9 @@ public class Instituto {
         this.ofertas.add(ofertaAcademica);
     }
 
-    //HAY QUE VER BIEN COMO HACER PARA GENERAR EL INFORME SIN TENER QUE USAR LOS .toString() en Programa y Curso
-    public String generarInforme(){
-        return "Instituto{" +
-                "nombre='" + nombre +
-                ", ofertas=" + ofertas +
-                '}';
+    public void generarInforme(){
+        for(OfertaAcademica oferta : ofertas)
+            System.out.println(oferta.getNombre() + ", precio: " + oferta.calcularPrecio());
     }
 
 

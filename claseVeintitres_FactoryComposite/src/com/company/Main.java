@@ -20,8 +20,42 @@ public class Main {
         instituto1.agregarOfertaAcademica(backend);
         instituto1.agregarOfertaAcademica(fullstack);
 
+        System.out.println("-----------------");
+        instituto1.generarInforme();
 
-        System.out.println("\n" + instituto1.generarInforme());
+        Taller dt = (Taller) OfertaFactory.getInstance().crearOferta("Design Thinking");
+        Taller uxui = (Taller) OfertaFactory.getInstance().crearOferta("UX/UI");
+
+        Carrera ctd = (Carrera) OfertaFactory.getInstance().crearOferta("Certified Tech Developer");
+        try {
+            ctd.addOfertable(frontend);
+            ctd.addOfertable(backend);
+            ctd.addOfertable(dt);
+            ctd.addOfertable(uxui);
+        } catch (CarreraException e) {
+            e.printStackTrace();
+        }
+
+        instituto1.agregarOfertaAcademica(dt);
+        instituto1.agregarOfertaAcademica(uxui);
+        instituto1.agregarOfertaAcademica(ctd);
+
+        System.out.println("--------------");
+        instituto1.generarInforme();
+
+        System.out.println(ctd.toString());
+
+        Curso menos10hs = (Curso) OfertaFactory.getInstance().crearOferta("menos10hs");
+        System.out.println("La cantidad de horas totales del curso menos10hs son: " + menos10hs.getCargaHorariaTotal());
+
+        try {
+            ctd.addOfertable(menos10hs);
+        } catch (CarreraException e){
+            //System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+
+        System.out.println(ctd.toString());
 
     }
 }

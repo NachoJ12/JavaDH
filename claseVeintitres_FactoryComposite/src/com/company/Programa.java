@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Programa extends OfertaAcademica{
-    private List<Ofertable> programa;
+    private List<OfertaAcademica> programa;
     private Double bonificacion;
 
     public Programa(String nombre, String descripcion, Double bonificacion) {
@@ -13,14 +13,14 @@ public class Programa extends OfertaAcademica{
         this.bonificacion = bonificacion;
     }
 
-    public void addOfertable(Ofertable ofertable){
+    public void addOfertable(OfertaAcademica ofertable){
         this.programa.add(ofertable);
     }
 
     @Override
     public Double calcularPrecio() {
         Double precioTotal = 0.0;
-        for (Ofertable ofertable : programa) {
+        for (OfertaAcademica ofertable : programa) {
             precioTotal += ofertable.calcularPrecio();
         }
         return precioTotal - (precioTotal * this.bonificacion / 100);
